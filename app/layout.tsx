@@ -49,9 +49,34 @@ const silkaMono = localFont({
   ],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "Latent Foundry",
   description: "this is the latent foundry",
+  icons: {
+    icon: [
+      { url: `${basePath}/favicon.ico` },
+      {
+        url: `${basePath}/favicon-32x32.png`,
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: `${basePath}/favicon-16x16.png`,
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: `${basePath}/apple-touch-icon.png`,
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: `${basePath}/site.webmanifest`,
 };
 
 export default function RootLayout({
