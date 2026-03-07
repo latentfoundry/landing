@@ -26,12 +26,22 @@ body {
 }
 
 .flicker-heading {
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .flicker-word {
   display: inline-flex;
-  gap: 0.12em;
+  gap: 0.1em;
+}
+
+@media (min-width: 640px) {
+  .flicker-heading {
+    letter-spacing: 0.02em;
+  }
+
+  .flicker-word {
+    gap: 0.12em;
+  }
 }
 
 .flicker-letter {

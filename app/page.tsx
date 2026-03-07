@@ -15,10 +15,10 @@ function getFlickerStyle(wordIndex: number, letterIndex: number): CSSProperties 
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black">
+    <div className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_top,#121212_0%,#000000_60%)] px-6">
       <h1
         aria-label="Latent Foundry"
-        className="flicker-heading inline-flex items-center gap-16 whitespace-nowrap text-4xl font-bold uppercase text-white sm:gap-24 sm:text-6xl"
+        className="flicker-heading inline-flex flex-col items-center gap-6 text-center text-[clamp(2rem,12vw,4.5rem)] font-bold uppercase leading-[0.95] text-white sm:flex-row sm:gap-24 sm:text-[clamp(3rem,6vw,5.5rem)]"
       >
         {words.map((word, wordIndex) => (
           <span key={word} className="flicker-word" aria-hidden="true">
