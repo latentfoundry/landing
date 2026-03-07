@@ -50,10 +50,34 @@ const silkaMono = localFont({
 });
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://latentfoundry.dev";
+const ogImagePath = `${basePath}/og-image.png`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Latent Foundry",
   description: "this is the latent foundry",
+  openGraph: {
+    title: "Latent Foundry",
+    description: "this is the latent foundry",
+    url: "/",
+    siteName: "Latent Foundry",
+    images: [
+      {
+        url: ogImagePath,
+        width: 1200,
+        height: 630,
+        alt: "Latent Foundry",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Latent Foundry",
+    description: "this is the latent foundry",
+    images: [ogImagePath],
+  },
   icons: {
     icon: [
       { url: `${basePath}/favicon.ico` },
